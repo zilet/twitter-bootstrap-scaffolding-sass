@@ -53,7 +53,7 @@
 					<g:form class="form-horizontal" action="edit" id="\${${propertyName}?.id}" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
 						<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 						<fieldset>
-							<f:all bean="${propertyName}"/>
+							<g:render template="form" />
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary">
 									<i class="icon-ok icon-white"></i>

@@ -14,7 +14,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<r:require modules="scaffolding"/>
+		<r:require modules="core"/>
 
 		<!-- Le fav and touch icons -->
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -38,7 +38,7 @@
 						<span class="icon-bar"></span>
 					</a>
 					
-					<a class="brand" href="${createLink(uri: '/')}">Grails Twitter Bootstrap</a>
+					<a class="brand" href="${createLink(uri: '/')}">Grails Sass Twitter Bootstrap</a>
 
 					<div class="nav-collapse">
 						<ul class="nav">							

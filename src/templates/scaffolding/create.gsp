@@ -4,11 +4,11 @@
 	<head>
 		<meta name="layout" content="bootstrap">
 		<g:set var="entityName" value="\${message(code: '${domainClass.propertyName}.label', default: '${className}')}" />
-		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<div class="row-fluid">
-			
+
 			<div class="span3">
 				<div class="well">
 					<ul class="nav nav-list">
@@ -19,9 +19,9 @@
 								<g:message code="default.list.label" args="[entityName]" />
 							</g:link>
 						</li>
-						<li class="active">
+						<li>
 							<g:link class="create" action="create">
-								<i class="icon-plus icon-white"></i>
+								<i class="icon-plus"></i>
 								<g:message code="default.create.label" args="[entityName]" />
 							</g:link>
 						</li>
@@ -32,7 +32,7 @@
 			<div class="span9">
 
 				<div class="page-header">
-					<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+					<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 				</div>
 
 				<g:if test="\${flash.message}">
@@ -50,9 +50,10 @@
 				</g:hasErrors>
 
 				<fieldset>
-					<g:form class="form-horizontal" action="create" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+					<g:form class="form-horizontal" action="save" id="\${${propertyName}?.id}" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+						<g:hiddenField name="version" value="\${${propertyName}?.version}" />
 						<fieldset>
-							<f:all bean="${propertyName}"/>
+							<g:render template="form" />
 							<div class="form-actions">
 								<button type="submit" class="btn btn-primary">
 									<i class="icon-ok icon-white"></i>
@@ -62,9 +63,14 @@
 						</fieldset>
 					</g:form>
 				</fieldset>
-				
+
 			</div>
 
 		</div>
 	</body>
 </html>
+
+
+
+
+		
