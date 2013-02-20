@@ -14,3 +14,5 @@ Sass resources are located at compass-style folder. When you run 'compass watch'
 Based on the idea from Rob Fletchers [twitter-bootstrap-scaffolding](https://github.com/robfle[tcher/twitter-bootstrap-scaffolding), but with the idea to include all needed assets to have an easy project kickstart template.
 
 Original Sass conversion at [Sass resources](https://github.com/jlong/sass-twitter-bootstrap)
+
+Enriched by font-awesome to provide icons through font (for your lovely retina displays) (http://fortawesome.github.com/Font-Awesome/)

@@ -46,6 +46,9 @@
 							<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 								<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}">${c.naturalName}</g:link></li>
 							</g:each>
+							<li <%= request.forwardURI == "${createLink(uri: '/bootstrap')}" ? ' class="active"' : '' %>>
+								<a href="${createLink(uri:'/bootstrap')}">Bootstrap example</a>
+							</li>
 						</ul>
 					</div>
 				</div>

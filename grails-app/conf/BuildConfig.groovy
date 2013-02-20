@@ -28,7 +28,7 @@ grails.project.dependency.resolution = {
     plugins {
         compile ":hibernate:$grailsVersion"
 		compile ":joda-time:1.3.1"
-        compile ":jquery:1.7.1"
+        compile ":jquery:1.8.3"
         compile ":resources:1.1.6"
 
 		runtime ":fields:1.0.1"
@@ -36,7 +36,6 @@ grails.project.dependency.resolution = {
 		runtime ":cached-resources:1.0"
 		runtime ":zipped-resources:1.0"
 
-		build ":cloud-foundry:1.2.1"
-        build ":tomcat:$grailsVersion"
+		build ":tomcat:$grailsVersion"
     }
 }
