@@ -2,7 +2,7 @@ modules = {
     core {
 		defaultBundle 'ui'
 		resource url: 'css/bootstrap.css'
-		resource url: 'css/bootstrap-responsive.css'
+		resource url: 'css/responsive.css'
 		resource url: 'js/google-code-prettify/prettify.css'
         
 		resource url:'js/application.js'
